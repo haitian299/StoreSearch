@@ -19,10 +19,17 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MsW-x0-UJN">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Bnq-9a-aAy"/>
+                        <outlet property="delegate" destination="-1" id="Ph1-My-m1I"/>
+                    </connections>
                 </tableView>
                 <searchBar contentMode="redraw" fixedFrame="YES" placeholder="App name, artist, song, album, ebook" translatesAutoresizingMaskIntoConstraints="NO" id="3TR-rX-jaR">
                     <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="4bQ-t9-MiK"/>
+                    </connections>
                 </searchBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
