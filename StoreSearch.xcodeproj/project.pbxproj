@@ -11,10 +11,10 @@
 		5062CE1F1AF243CA00850045 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5062CE1E1AF243CA00850045 /* NothingFoundCell.xib */; };
 		507934661AEE560400AF7639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 507934651AEE560400AF7639 /* main.m */; };
 		507934691AEE560400AF7639 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 507934681AEE560400AF7639 /* AppDelegate.m */; };
-		507934711AEE560400AF7639 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507934701AEE560400AF7639 /* Images.xcassets */; };
 		507934801AEE560400AF7639 /* StoreSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5079347F1AEE560400AF7639 /* StoreSearchTests.m */; };
 		5079348C1AEE57C200AF7639 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5079348A1AEE57C200AF7639 /* SearchViewController.m */; };
 		5079348D1AEE57C200AF7639 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5079348B1AEE57C200AF7639 /* SearchViewController.xib */; };
+		6918DF831AF28962003453F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6918DF821AF28962003453F2 /* Images.xcassets */; };
 		698C45151AEFD256006B84A7 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 698C45141AEFD256006B84A7 /* SearchResult.m */; };
 		698C45171AEFDC3D006B84A7 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */; };
 /* End PBXBuildFile section */
@@ -38,13 +38,13 @@
 		507934651AEE560400AF7639 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		507934671AEE560400AF7639 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		507934681AEE560400AF7639 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		507934701AEE560400AF7639 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		507934791AEE560400AF7639 /* StoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5079347E1AEE560400AF7639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5079347F1AEE560400AF7639 /* StoreSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoreSearchTests.m; sourceTree = "<group>"; };
 		507934891AEE57C200AF7639 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		5079348A1AEE57C200AF7639 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		5079348B1AEE57C200AF7639 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		6918DF821AF28962003453F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		698C45131AEFD256006B84A7 /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
 		698C45141AEFD256006B84A7 /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
 		698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 			children = (
 				507934671AEE560400AF7639 /* AppDelegate.h */,
 				507934681AEE560400AF7639 /* AppDelegate.m */,
-				507934701AEE560400AF7639 /* Images.xcassets */,
 				698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */,
+				6918DF821AF28962003453F2 /* Images.xcassets */,
 				5062CE1B1AF23D6A00850045 /* SearchResultCell.h */,
 				5062CE1C1AF23D6A00850045 /* SearchResultCell.m */,
 				507934891AEE57C200AF7639 /* SearchViewController.h */,
@@ -213,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5062CE1F1AF243CA00850045 /* NothingFoundCell.xib in Resources */,
-				507934711AEE560400AF7639 /* Images.xcassets in Resources */,
+				6918DF831AF28962003453F2 /* Images.xcassets in Resources */,
 				698C45171AEFDC3D006B84A7 /* SearchResultCell.xib in Resources */,
 				5079348D1AEE57C200AF7639 /* SearchViewController.xib in Resources */,
 			);
