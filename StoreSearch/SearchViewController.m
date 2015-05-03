@@ -12,6 +12,7 @@
 
 static NSString * const SearchResultCellIdentifier = @"SearchResultCell";
 static NSString * const NothingFoundCellIdentifier = @"NothingFoundCell";
+static NSString * const LoadingCellIdentifier = @"LoadingCell";
 
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -23,6 +24,7 @@ static NSString * const NothingFoundCellIdentifier = @"NothingFoundCell";
 
 {
     NSMutableArray *_searchResults;
+    bool _isLoading;
 }
 
 - (void)viewDidLoad {
@@ -35,6 +37,9 @@ static NSString * const NothingFoundCellIdentifier = @"NothingFoundCell";
     self.tableView.rowHeight = 80;
     cellNib = [UINib nibWithNibName:NothingFoundCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:NothingFoundCellIdentifier];
+    
+    cellNib = [UINib nibWithNibName:LoadingCellIdentifier bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:LoadingCellIdentifier];
     
     [self.searchBar becomeFirstResponder];
 }
@@ -158,6 +163,7 @@ static NSString * const NothingFoundCellIdentifier = @"NothingFoundCell";
         NSLog(@"Dictionary '%@'", dictionary);
         
         [self parseDictionary:dictionary];
+        [_searchResults sortUsingSelector:@selector(compareName:)];
         
         [self.tableView reloadData];
     }

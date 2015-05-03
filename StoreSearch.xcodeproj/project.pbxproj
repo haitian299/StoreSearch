@@ -17,6 +17,7 @@
 		6918DF831AF28962003453F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6918DF821AF28962003453F2 /* Images.xcassets */; };
 		698C45151AEFD256006B84A7 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 698C45141AEFD256006B84A7 /* SearchResult.m */; };
 		698C45171AEFDC3D006B84A7 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */; };
+		69A685811AF64FAD0039ACE5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69A685801AF64FAD0039ACE5 /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		698C45131AEFD256006B84A7 /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
 		698C45141AEFD256006B84A7 /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
 		698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		69A685801AF64FAD0039ACE5 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				5062CE1E1AF243CA00850045 /* NothingFoundCell.xib */,
 				698C45131AEFD256006B84A7 /* SearchResult.h */,
 				698C45141AEFD256006B84A7 /* SearchResult.m */,
+				69A685801AF64FAD0039ACE5 /* LoadingCell.xib */,
 				5079348B1AEE57C200AF7639 /* SearchViewController.xib */,
 				507934631AEE560400AF7639 /* Supporting Files */,
 			);
@@ -215,6 +218,7 @@
 				5062CE1F1AF243CA00850045 /* NothingFoundCell.xib in Resources */,
 				6918DF831AF28962003453F2 /* Images.xcassets in Resources */,
 				698C45171AEFDC3D006B84A7 /* SearchResultCell.xib in Resources */,
+				69A685811AF64FAD0039ACE5 /* LoadingCell.xib in Resources */,
 				5079348D1AEE57C200AF7639 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
