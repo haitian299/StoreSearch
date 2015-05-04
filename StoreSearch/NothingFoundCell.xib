@@ -13,7 +13,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eRT-pA-Whc" id="sCh-jE-79N">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nothing Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw5-pi-Cu3">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw5-pi-Cu3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
@@ -22,10 +22,24 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="jw5-pi-Cu3" firstAttribute="top" secondItem="sCh-jE-79N" secondAttribute="topMargin" id="56m-VC-KSy"/>
+                    <constraint firstItem="jw5-pi-Cu3" firstAttribute="top" secondItem="sCh-jE-79N" secondAttribute="topMargin" constant="-8" id="PMX-RH-3fY"/>
+                    <constraint firstItem="jw5-pi-Cu3" firstAttribute="leading" secondItem="sCh-jE-79N" secondAttribute="leadingMargin" id="Vnz-jE-lwa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jw5-pi-Cu3" secondAttribute="trailing" constant="-8" id="bfO-UH-Ayj"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jw5-pi-Cu3" secondAttribute="bottom" constant="-9" id="eNL-XJ-jDL"/>
                     <constraint firstAttribute="trailingMargin" secondItem="jw5-pi-Cu3" secondAttribute="trailing" id="gpT-8Z-2ZC"/>
                     <constraint firstItem="jw5-pi-Cu3" firstAttribute="leading" secondItem="sCh-jE-79N" secondAttribute="leadingMargin" constant="-8" id="i7x-re-jux"/>
                     <constraint firstAttribute="bottomMargin" secondItem="jw5-pi-Cu3" secondAttribute="bottom" id="le5-Qh-VRk"/>
+                    <constraint firstItem="jw5-pi-Cu3" firstAttribute="leading" secondItem="sCh-jE-79N" secondAttribute="leadingMargin" constant="-8" id="qia-CI-8Br"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="56m-VC-KSy"/>
+                        <exclude reference="Vnz-jE-lwa"/>
+                        <exclude reference="gpT-8Z-2ZC"/>
+                        <exclude reference="i7x-re-jux"/>
+                        <exclude reference="le5-Qh-VRk"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <point key="canvasLocation" x="619" y="472"/>
         </tableViewCell>
