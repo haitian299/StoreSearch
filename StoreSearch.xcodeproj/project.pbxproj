@@ -106,11 +106,11 @@
 				5062CE1C1AF23D6A00850045 /* SearchResultCell.m */,
 				507934891AEE57C200AF7639 /* SearchViewController.h */,
 				5079348A1AEE57C200AF7639 /* SearchViewController.m */,
+				5079348B1AEE57C200AF7639 /* SearchViewController.xib */,
 				5062CE1E1AF243CA00850045 /* NothingFoundCell.xib */,
 				698C45131AEFD256006B84A7 /* SearchResult.h */,
 				698C45141AEFD256006B84A7 /* SearchResult.m */,
 				69A685801AF64FAD0039ACE5 /* LoadingCell.xib */,
-				5079348B1AEE57C200AF7639 /* SearchViewController.xib */,
 				507934631AEE560400AF7639 /* Supporting Files */,
 			);
 			path = StoreSearch;

@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import "SearchResult.h"
 #import "SearchResultCell.h"
+#import <AFNetworking/AFNetworking.h>
 
 static NSString * const SearchResultCellIdentifier = @"SearchResultCell";
 static NSString * const NothingFoundCellIdentifier = @"NothingFoundCell";
@@ -17,6 +18,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
@@ -25,12 +27,25 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 {
     NSMutableArray *_searchResults;
     bool _isLoading;
+    NSOperationQueue *_queue;
 }
+
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self)
+    {
+        _queue = [[NSOperationQueue alloc]init];
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(108, 0, 0, 0);
     
     UINib *cellNib = [UINib nibWithNibName:SearchResultCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:SearchResultCellIdentifier];
@@ -146,54 +161,71 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 }
 
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+- (void)performSearch
 {
     
-    if ([searchBar.text length] > 0 )
+    if ([self.searchBar.text length] > 0 )
     {
-        [searchBar resignFirstResponder];
+        [self.searchBar resignFirstResponder];
+        
+        [_queue cancelAllOperations];
         
         _isLoading = YES;
         [self.tableView reloadData];
         
         _searchResults = [NSMutableArray arrayWithCapacity:10];
         
-        dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        NSURL *url = [self urlWithSearchText:self.searchBar.text category:self.segmentedControl.selectedSegmentIndex];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
-        dispatch_async(queue, ^{
-            NSURL *url = [self urlWithSearchText:searchBar.text];
-            NSString *jsonString = [self performStoreRequestWithUrl:url];
-            if (jsonString == nil) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self showNetworkError];
-                });
-                return;
-            }
-            NSDictionary *dictionary = [self parseJSON:jsonString];
-            if (dictionary == nil) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self showNetworkError];
-                });
-                return;
-            }
-            [self parseDictionary:dictionary];
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        operation.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [self parseDictionary:responseObject];
             [_searchResults sortUsingSelector:@selector(compareName:)];
             
-            dispatch_async(dispatch_get_main_queue(), ^{
-                _isLoading = NO;
-                [self.tableView reloadData];
-            });
-        });
+            _isLoading = NO;
+            [self.tableView reloadData];
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            if (operation.isCancelled) {
+                return;
+            }
+            [self showNetworkError];
+            
+            _isLoading = NO;
+            [self.tableView reloadData];
+        }];
+        
+        [_queue addOperation:operation];
+        
     }
     
     
 }
 
 
-- (NSURL *)urlWithSearchText:(NSString *)searchText
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [self performSearch];
+}
+
+
+- (NSURL *)urlWithSearchText:(NSString *)searchText category:(NSInteger)category
+{
+    NSString *categoryName;
+    switch (category) {
+        case 0: categoryName = @""; break;
+        case 1: categoryName = @"musicTrack"; break;
+        case 2: categoryName = @"software"; break;
+        case 3: categoryName = @"ebook"; break;
+            
+        default:
+            break;
+    }
+    
     NSString *escapedSearchText = [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@",escapedSearchText];
+    NSString *urlString = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&limit=200&entity=%@",escapedSearchText, categoryName];
     NSURL *url = [NSURL URLWithString:urlString];
     return url;
 }
@@ -346,6 +378,14 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
         return nil;
     }else{
         return indexPath;
+    }
+}
+
+- (IBAction)segmentChanged:(UISegmentedControl *)sender
+{
+    if (_searchResults != nil)
+    {
+        [self performSearch];
     }
 }
 
