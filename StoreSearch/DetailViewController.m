@@ -67,6 +67,8 @@
 
 - (void)dealloc{
     NSLog(@"dealloc %@",self);
+    
+    [self.artworkImageView cancelImageRequestOperation];
 }
 
 - (void)updateUI {
@@ -91,9 +93,11 @@
     }
     
     [self.priceButton setTitle:priceText forState:UIControlStateNormal];
-    
-    self.priceButton.titleLabel.text = searchResult.price.stringValue;
-    [self.artworkImageView setImageWithURL:[NSURL URLWithString:searchResult.artworkURL100] placeholderImage:[UIImage imageNamed:@"Placeholder"]];
+    [self.artworkImageView setImageWithURL:[NSURL URLWithString:self.searchResult.artworkURL100]];
+}
+
+- (IBAction)openInStore:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.searchResult.storeURL]];
 }
 
 
