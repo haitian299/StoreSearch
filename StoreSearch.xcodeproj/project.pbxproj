@@ -14,6 +14,7 @@
 		507934801AEE560400AF7639 /* StoreSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5079347F1AEE560400AF7639 /* StoreSearchTests.m */; };
 		5079348C1AEE57C200AF7639 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5079348A1AEE57C200AF7639 /* SearchViewController.m */; };
 		5079348D1AEE57C200AF7639 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5079348B1AEE57C200AF7639 /* SearchViewController.xib */; };
+		5089EA781AFF8CC100152178 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5089EA771AFF8CC100152178 /* GradientView.m */; };
 		50E5FF021AFBA2890089EB64 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E5FF001AFBA2880089EB64 /* DetailViewController.m */; };
 		50E5FF031AFBA2890089EB64 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50E5FF011AFBA2880089EB64 /* DetailViewController.xib */; };
 		65DE9F60354D5FCB5BC1D12D /* libPods-StoreSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D0167787A655C0F0AF4E3E /* libPods-StoreSearch.a */; };
@@ -50,6 +51,8 @@
 		507934891AEE57C200AF7639 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		5079348A1AEE57C200AF7639 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		5079348B1AEE57C200AF7639 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		5089EA761AFF8CC100152178 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		5089EA771AFF8CC100152178 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		50E5FEFF1AFBA2880089EB64 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		50E5FF001AFBA2880089EB64 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		50E5FF011AFBA2880089EB64 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
@@ -111,6 +114,8 @@
 				698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */,
 				50E5FEFF1AFBA2880089EB64 /* DetailViewController.h */,
 				50E5FF001AFBA2880089EB64 /* DetailViewController.m */,
+				5089EA761AFF8CC100152178 /* GradientView.h */,
+				5089EA771AFF8CC100152178 /* GradientView.m */,
 				50E5FF011AFBA2880089EB64 /* DetailViewController.xib */,
 				507934891AEE57C200AF7639 /* SearchViewController.h */,
 				5079348A1AEE57C200AF7639 /* SearchViewController.m */,
@@ -310,6 +315,7 @@
 				5062CE1D1AF23D6A00850045 /* SearchResultCell.m in Sources */,
 				698C45151AEFD256006B84A7 /* SearchResult.m in Sources */,
 				507934661AEE560400AF7639 /* main.m in Sources */,
+				5089EA781AFF8CC100152178 /* GradientView.m in Sources */,
 				50E5FF021AFBA2890089EB64 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
