@@ -105,10 +105,10 @@
 			children = (
 				507934671AEE560400AF7639 /* AppDelegate.h */,
 				507934681AEE560400AF7639 /* AppDelegate.m */,
-				698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */,
 				6918DF821AF28962003453F2 /* Images.xcassets */,
 				5062CE1B1AF23D6A00850045 /* SearchResultCell.h */,
 				5062CE1C1AF23D6A00850045 /* SearchResultCell.m */,
+				698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */,
 				50E5FEFF1AFBA2880089EB64 /* DetailViewController.h */,
 				50E5FF001AFBA2880089EB64 /* DetailViewController.m */,
 				50E5FF011AFBA2880089EB64 /* DetailViewController.xib */,
