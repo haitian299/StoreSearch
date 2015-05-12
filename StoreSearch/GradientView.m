@@ -18,6 +18,10 @@
     return self;
 }
 
+- (void)dealloc {
+    NSLog(@"dealloc %@", self);
+}
+
 - (void)drawRect:(CGRect)rect
 {
     const CGFloat components[8] = { 0.0f, 0.0f, 0.0f, 0.3f, 0.0f, 0.0f, 0.0f, 0.7f };

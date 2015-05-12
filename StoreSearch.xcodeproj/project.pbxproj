@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506130A11B0231CA005C1C3F /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5061309F1B0231CA005C1C3F /* LandscapeViewController.m */; };
+		506130A21B0231CA005C1C3F /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506130A01B0231CA005C1C3F /* LandscapeViewController.xib */; };
 		5062CE1D1AF23D6A00850045 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5062CE1C1AF23D6A00850045 /* SearchResultCell.m */; };
 		5062CE1F1AF243CA00850045 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5062CE1E1AF243CA00850045 /* NothingFoundCell.xib */; };
 		507934661AEE560400AF7639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 507934651AEE560400AF7639 /* main.m */; };
@@ -37,6 +39,9 @@
 /* Begin PBXFileReference section */
 		0AD66596E431F94FD17AF58A /* Pods-StoreSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearch/Pods-StoreSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		16E510511713916EADA79C4E /* Pods-StoreSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearch/Pods-StoreSearch.release.xcconfig"; sourceTree = "<group>"; };
+		5061309E1B0231CA005C1C3F /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
+		5061309F1B0231CA005C1C3F /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
+		506130A01B0231CA005C1C3F /* LandscapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandscapeViewController.xib; sourceTree = "<group>"; };
 		5062CE1B1AF23D6A00850045 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
 		5062CE1C1AF23D6A00850045 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
 		5062CE1E1AF243CA00850045 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -112,10 +117,13 @@
 				5062CE1B1AF23D6A00850045 /* SearchResultCell.h */,
 				5062CE1C1AF23D6A00850045 /* SearchResultCell.m */,
 				698C45161AEFDC3D006B84A7 /* SearchResultCell.xib */,
-				50E5FEFF1AFBA2880089EB64 /* DetailViewController.h */,
-				50E5FF001AFBA2880089EB64 /* DetailViewController.m */,
 				5089EA761AFF8CC100152178 /* GradientView.h */,
 				5089EA771AFF8CC100152178 /* GradientView.m */,
+				5061309E1B0231CA005C1C3F /* LandscapeViewController.h */,
+				5061309F1B0231CA005C1C3F /* LandscapeViewController.m */,
+				506130A01B0231CA005C1C3F /* LandscapeViewController.xib */,
+				50E5FEFF1AFBA2880089EB64 /* DetailViewController.h */,
+				50E5FF001AFBA2880089EB64 /* DetailViewController.m */,
 				50E5FF011AFBA2880089EB64 /* DetailViewController.xib */,
 				507934891AEE57C200AF7639 /* SearchViewController.h */,
 				5079348A1AEE57C200AF7639 /* SearchViewController.m */,
@@ -260,6 +268,7 @@
 				698C45171AEFDC3D006B84A7 /* SearchResultCell.xib in Resources */,
 				69A685811AF64FAD0039ACE5 /* LoadingCell.xib in Resources */,
 				5079348D1AEE57C200AF7639 /* SearchViewController.xib in Resources */,
+				506130A21B0231CA005C1C3F /* LandscapeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +325,7 @@
 				698C45151AEFD256006B84A7 /* SearchResult.m in Sources */,
 				507934661AEE560400AF7639 /* main.m in Sources */,
 				5089EA781AFF8CC100152178 /* GradientView.m in Sources */,
+				506130A11B0231CA005C1C3F /* LandscapeViewController.m in Sources */,
 				50E5FF021AFBA2890089EB64 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
